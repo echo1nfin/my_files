@@ -10,11 +10,11 @@ def summ(n):
 		return 1
 	if n == 1:
 		return 2
-	l = 2
+	count = 2
 	res = factorial(n)
 	while res != 1:
-		l += 1/res
+		count += 1/res
 		res //= n
 		n -= 1
-	return l
-print(summ(100000))
+	return count
+print(summ(1_000_000))
