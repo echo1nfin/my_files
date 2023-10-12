@@ -1,23 +1,20 @@
 from sys import set_int_max_str_digits as digits
+import random
 
 digits(100_000_000)
-
-# def fib(n, computed = {0: 0, 1: 1}):
-# 	if n not in computed:
-# 		computed[n] = fib(n-1, computed) + fib(n-2, computed)
-# 	return computed[n]
-# print(fib(400_000))
 
 def fib(n):
 	a, b = 0, 1
 	for _ in range(n):
 		a, b = b, a+b
 	return a
-# print(fib(1_000_000))
 
-# требуется подсчитать кол-во послед длинный n сост из 0 и 1 
-# в которых никакие две единицы не стоят рядом (по числам фибоначчи)
-
+def stringer():
+	s = ''
+	for _ in range(100):
+		s += str(random.randint(0,1))
+	return s.count('0')
+print(stringer())
 
 
 # codeforces.com -> зарегаться для задачек
